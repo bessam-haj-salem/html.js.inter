@@ -24,13 +24,15 @@
          acc[key] = f(element, key); 
        }); 
        return acc; 
- }
-
-  function eachHtml(array){
-  return map(array,function(element){
-    return 'Hello World ' + element
+ 
+  var eachHtml = function (array, callback){
+  return callback(array);
+    }
+ eachHtml(divisions, function(array){
+  return map(array, function(element){
+    return "hello world " + element;
   })
- }
+ })
 
 </script>
 <body>
